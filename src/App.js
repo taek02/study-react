@@ -10,14 +10,31 @@ export default App; */
 
 //클래스형 컴포넌트
 import React,{ Component } from 'react';
-import IterationSample from './Component/IterationSample';
-import Say from './Component/Say';
-import ValidationSample from './Component/ValidationSample';
+import ErrorBoundary from './Component/ErrorBoundary';
+import LifeCycleSample from './Component/LifeCycleSample';
+
+// 랜덤 색상을 생성합니다.
+function getRandomColor(){
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
 
 class App extends Component {
+  state = {
+    color:'#000000'
+  }
+  handleClick = () => {
+    this.setState({
+      color: getRandomColor()
+    });
+  }
   render() {
     return (
-      <IterationSample/>
+      <div>
+        <button onClick={this.handleClick}>랜덤 색상</button>
+        <ErrorBoundary>
+          <LifeCycleSample color={this.state.color}/>
+        </ErrorBoundary>
+      </div>
     );
   }
 }
