@@ -9,10 +9,15 @@ export default App; */
 
 
 //클래스형 컴포넌트
-import Say from "./Say";
+import {Componet} from 'react';
+import ValidationSample from "./Component/ValidationSample"
 
-const App = () => {
-  return <Say/>;
-};
+class App extends Componet {
+  render(){
+    return (
+      <ValidationSample/>
+    );
+  }
+}
 
 export default App;
