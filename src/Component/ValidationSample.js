@@ -1,7 +1,7 @@
-import {Componet} from 'react';
+import {Component} from 'react';
 import './ValidationSample.css';
 
-class ValidationSample extends Componet{
+class ValidationSample extends Component{
   state = {
     password: '',
     clicked: false,
@@ -28,9 +28,9 @@ class ValidationSample extends Componet{
         typed="password"
         value = {this.state.password}
         onChange={this.handleChange}
-        clasNmae={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}
+        className={this.state.clicked ? (this.state.validated ? 'success' : 'failure') : ''}
         />
-        <button onCick={this.handleButtonClick}>검증하기</button>
+        <button onClick={this.handleButtonClick}>검증하기</button>
       </div>
     );
   }

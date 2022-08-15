@@ -9,13 +9,15 @@ export default App; */
 
 
 //클래스형 컴포넌트
-import {Componet} from 'react';
-import ValidationSample from "./Component/ValidationSample"
+import React,{ Component } from 'react';
+import IterationSample from './Component/IterationSample';
+import Say from './Component/Say';
+import ValidationSample from './Component/ValidationSample';
 
-class App extends Componet {
-  render(){
+class App extends Component {
+  render() {
     return (
-      <ValidationSample/>
+      <IterationSample/>
     );
   }
 }
